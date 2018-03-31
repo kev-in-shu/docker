@@ -14,7 +14,8 @@ node('docker') {
         checkout scm
     }
 
-    if (!infra.isTrusted()) {
+    //if (!infra.isTrusted()) {
+    if (true) {
 
         stage('shellcheck') {
             docker.image('koalaman/shellcheck-alpine').inside() {
